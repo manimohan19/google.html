@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            border: 1px solid;
+            padding: 50px;
+            width: fit-content;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background-color: rosybrown;
+
+        }
+        button{
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            border-radius: 20px;
+            border: none;
+         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+        }
+    </style>
+</head>     
+<body>
+    <h1 id="text-input">ColorChange</h1>
+    <button id="bnt" onclick="bntClick()">changeBRC</button>
+<script>
+    const textInput = document.getElementById("text-input")
+
+    function bntClick () {
+        textInput.style.backgroundColor="yellow";
+        
+    }
+</script>
+
+
+</body>
+</html>
