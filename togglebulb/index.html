@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <img id="bulb-img" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
+    <button style="color: green; padding: 10px 15px; border-radius: 20px; font-size: medium;" id="bnt1" onclick="bulb_change()">ON</button>
+    <!-- <button id="butt2" onclick="bulb_normal()">off</button> -->
+
+    <script>
+        
+
+
+function bulb_change() {
+const bnt = document.getElementById("bnt1")
+const bulb = document.getElementById("bulb-img")
+
+if(bulb.src  == "https://www.w3schools.com/js/pic_bulboff.gif"){
+bulb.src = "https://www.w3schools.com/js/pic_bulbon.gif"
+bnt.innerText="OFF";
+bnt.style.color="red"
+}
+
+else{
+bulb.src = "https://www.w3schools.com/js/pic_bulboff.gif"
+bnt.innerText="ON";
+bnt.style.color="green"
+}
+    
+}
+ 
+    
+
+
+
+
+
+
+    </script>
+</body>
+</html>
