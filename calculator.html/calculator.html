@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        html{
+            background-color: steelblue;
+        }
+        .calculate{
+            /* border: 1px solid; */
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            padding: 20px;
+            margin-top: 15%;
+            border-radius: 10px;
+            background-color: rgb(81, 81, 81);
+        }
+        #display{
+            padding: 20px;
+            width: 335px;
+            background-color: #000000;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            font-size: larger;
+        }   
+        button{
+            padding: 15px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #444;
+  color: white;
+  transition: 0.2s;
+        }
+        button:hover{
+            /* transition-behavior: normal; */
+transition-delay: 0s;
+transition-duration: 0.2s;
+transition-property: all;
+transition-timing-function: ease;
+ background-color:#666;
+        }
+        .all-bnt{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 10px;
+            gap: 13px;
+        }
+         button.clear{
+            background-color: tomato;
+        }
+        button.clear:hover{
+            background: #666;
+        }
+        button.cal{
+            background-color: rgb(172, 239, 104);
+        }
+        button.cal:hover{
+            background: #666;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="calculate">
+        <input type="text" id="display" autocomplete="off">
+        <div class="all-bnt">
+        <button onclick="cleardisplay()" class="clear">C</button>
+        <button onclick="appendValue(1)">1</button>
+        <button onclick="appendValue(2)">2</button>
+        <button onclick="appendValue(3)">3</button>
+        <button onclick="appendValue(4)">4</button>
+        <button onclick="appendValue(5)">5</button>
+        <button onclick="appendValue(6)">6</button>
+        <button onclick="appendValue(7)">7</button>
+        <button onclick="appendValue(8)">8</button>
+        <button onclick="appendValue(9)">9</button>
+        <button onclick="appendValue(0)">0</button>
+        <button onclick="appendValue('.')">.</button>
+         <button onclick="del()">DEL</button>
+        <button onclick="appendValue('+')">+</button>
+        <button onclick="appendValue('-')">-</button>
+        <button onclick="appendValue('/')">/</button>
+        <button onclick="appendValue('%')">%</button>
+        <button onclick="appendValue('*')">*</button>
+        
+        <button class="cal" onclick="calc()">=</button>
+        </div>
+    </div>
+
+    <script>
+        const text = document.getElementById("display");
+        function appendValue(num) {
+            
+            text.value += num;
+        }
+
+        function calc(){
+            
+            text.value = eval(text.value);
+        }
+
+        function cleardisplay(){
+            text.value = "";
+        }
+        function del() {
+            text.value=text.value.slice(0,-1)
+        }
+    </script>
+</body>
+
+</html>
